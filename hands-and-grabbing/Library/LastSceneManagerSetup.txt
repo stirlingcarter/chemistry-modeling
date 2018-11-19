@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/proteins_simple_colliders.unity
+- path: Assets/grabbing scenes/grab_simple_tutorial2.unity
   isLoaded: 1
   isActive: 1
