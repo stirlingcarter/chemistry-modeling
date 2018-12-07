@@ -15,12 +15,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Target
+  - Ligand
+  - Target Node
+  - Ligand Node
+  - Target Parent
+  - Ligand Parent
   - 
   - 
   - 

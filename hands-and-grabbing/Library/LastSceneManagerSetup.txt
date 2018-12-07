@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/grabbing scenes/grab_simple_tutorial2.unity
+- path: Assets/scenes/grab_simple_OVR.unity
   isLoaded: 1
   isActive: 1
