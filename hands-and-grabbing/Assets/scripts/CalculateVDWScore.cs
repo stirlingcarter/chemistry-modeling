@@ -40,12 +40,16 @@ public class CalculateVDWScore : MonoBehaviour {
     // for p1 protein
     // remember: current gameObject script is attached to = parent of p1
     public GameObject p1ChildObject; // ENTERED BY USER
+    public GameObject p1ParentObject; // ENTERED BY USER
+
     MapCollidersToAtoms p1MapScriptObject; // need this to access array in mapping script
     SphereCollider[] p1CollidersArray;
     int p1MaxAtoms;
 
     // for p2 protein
     public GameObject p2ChildObject; // ENTERED BY USER
+    public GameObject p2ParentObject; // ENTERED BY USER
+
     MapCollidersToAtoms p2MapScriptObject;
     SphereCollider[] p2CollidersArray;
     int p2MaxAtoms;
@@ -71,13 +75,12 @@ public class CalculateVDWScore : MonoBehaviour {
 
         // for p2 protein
         p2MapScriptObject = p2ChildObject.GetComponent<MapCollidersToAtoms>();
-        p2CollidersArray = p2MapScriptObject.colliders_array;
-        p2MaxAtoms = p2CollidersArray.Length;
+        p2MaxAtoms = p2MapScriptObject.colliders_array.Length;
 
         // for constraints
         p2Mask = LayerMask.GetMask(p2LayerName);
         colliderHits = new Collider[p2MaxAtoms];
-    }
+    } // end of Start()
 
     void SumVDWPairCalc(){
         vdw_score = 0;
@@ -85,12 +88,12 @@ public class CalculateVDWScore : MonoBehaviour {
         for (int i = 0; i < p1MaxAtoms; i++)
         {
             p1Collider = p1CollidersArray[i];
-            maxCollidersHit = Physics.OverlapSphereNonAlloc(p1Collider.center, (float)max_dist, colliderHits, p2Mask);
+            maxCollidersHit = Physics.OverlapSphereNonAlloc(p1Collider.center + p1ParentObject.transform.position, (float)max_dist, colliderHits, p2Mask);
 
             for (int j = 0; j < maxCollidersHit; j++)
             {
                 p2Collider = (SphereCollider)colliderHits[j];
-                center_dist = Vector3.Distance(p1Collider.center, p2Collider.center);
+                center_dist = Vector3.Distance(p1Collider.center + p1ParentObject.transform.position, p2Collider.center + p2ParentObject.transform.position);
 
                 if (center_dist < max_dist)
                 {
@@ -99,10 +102,10 @@ public class CalculateVDWScore : MonoBehaviour {
                     B = Math.Pow(vdw_dist / center_dist, 6);
                     pair_calc = 4 * well_depth * (A - B);
                     vdw_score += pair_calc;
-                }
-            }
-        }
-    }
+                } // end of if(p2-collider is close enough) { do pairwise calculation b/w p1-collider and p2-collider}
+            } // end of for loop thru array of close enough p2-colliders
+        } // end of for loop thru array of all p1-colliders
+    } // end of SumVDWPairCalc()
 
     void Update() {
         SumVDWPairCalc();
@@ -110,5 +113,5 @@ public class CalculateVDWScore : MonoBehaviour {
         if (vdw_score < low_score){
             low_score = vdw_score;
         }
-    }
-}
+    } // end of Update()
+} // end of public class CalculateVDWScore

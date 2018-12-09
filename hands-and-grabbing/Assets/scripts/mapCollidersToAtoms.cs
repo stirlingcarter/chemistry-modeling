@@ -22,12 +22,9 @@ public class MapCollidersToAtoms : MonoBehaviour {
 
     // the collider array
     public SphereCollider[] colliders_array;
-    bool isBuilt = false; // false = colliders have not been added yet
 
     // Use this for initialization
     public void Map () {// each row of .txt file => row of matrix => sphere collider
-        if (!isBuilt)
-        {// first time running Map()
             int row = 0;
             data_cols = 5; // refers to elem name, x-coor, y-coor, z-coor, vdw radius
             float x_coor, y_coor, z_coor, vdw_rad;
@@ -69,12 +66,8 @@ public class MapCollidersToAtoms : MonoBehaviour {
                     ++row;
                 } // end of while loop
             } // end of using
-
-            isBuilt = true;
-
-        } // end of if(!isBuilt)
     } // end of Map()
-}
+} // end of public class MapCollidersToAtoms
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(MapCollidersToAtoms))]
@@ -83,9 +76,9 @@ public class MapCollidersToAtomsEditor : Editor
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-
         var script = (MapCollidersToAtoms)target;
-        if (GUILayout.Button("Build"))
+
+        if (GUILayout.Button("Build") && script.gameObject.GetComponent<SphereCollider>() == null)
         {
             script.Map();
         }

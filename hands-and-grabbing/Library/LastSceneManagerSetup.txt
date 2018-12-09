@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/grab_simple_OVR.unity
+- path: Assets/scenes/random test.unity
   isLoaded: 1
   isActive: 1

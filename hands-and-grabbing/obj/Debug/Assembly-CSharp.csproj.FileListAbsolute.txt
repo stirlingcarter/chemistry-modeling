@@ -336,3 +336,5 @@ C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\Temp\bin\De
 C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\boroshs\Desktop\chemistry-modeling-final\hands-and-grabbing\Temp\bin\Debug\UnityEditor.UI.xml

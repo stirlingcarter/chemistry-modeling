@@ -305,6 +305,7 @@
     <Compile Include="Assets\scripts\MapCollidersToAtoms.cs" />
     <Compile Include="Assets\scripts\OculusDemo.cs" />
     <Compile Include="Assets\scripts\OculusHapticsController.cs" />
+    <Compile Include="Assets\scripts\TestVDWCalc.cs" />
     <Compile Include="Assets\scripts\VibrationForce.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
@@ -313,7 +314,6 @@
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
     <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShader.shader" />
-    <None Include="Assets\1g5j\1g5j xyz files\mac_1g5j_no_rad.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlit.shader" />
@@ -326,7 +326,6 @@
     <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderPBSV2.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_CombinedMesh.shader" />
-    <None Include="Assets\1g5j\1g5j xyz files\windows_1g5j_no_rad.txt" />
     <None Include="Assets\Oculus\VR\Resources\Underlay Transparent Occluder.shader" />
     <None Include="Assets\Oculus\VR\Resources\Texture2D Blit.shader" />
     <None Include="Assets\target\target xyz files\mac_target_radius.txt" />
