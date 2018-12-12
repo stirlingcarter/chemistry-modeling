@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013055410630}
+  m_IsPrefabAsset: 1
+--- !u!1 &1000013055410630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4000013705906120}
+  - component: {fileID: 114000011650355712}
+  m_Layer: 0
+  m_Name: HapticHelper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000013705906120
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013055410630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8124095, y: 1.5919039, z: 1.0466751}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114000011650355712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013055410630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5b9876e0bdac0449279a6e8a92aed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoodAudio: {fileID: 8300000, guid: da8b8e20bcbf23948bb7f5ddbe3d20ef, type: 3}
+  BadAudio: {fileID: 8300000, guid: b04879195e6891946b6d293fc83d70eb, type: 3}
+  ExtraAudioClips:
+  - {fileID: 8300000, guid: d26b38d847fdd584ea41889378caa78a, type: 3}
+  - {fileID: 8300000, guid: f2d2a15daa42c5045896b88b95c8caf6, type: 3}
+  - {fileID: 8300000, guid: d01ac943bcbdf7a4082ed6bd761124b2, type: 3}
+  - {fileID: 8300000, guid: 31ca6f52655ea464badd45ae759284bf, type: 3}
+  - {fileID: 8300000, guid: a374059ecb0a79f4983dbec306eb44d5, type: 3}
+  AlwaysPreempt: 0
+  TestMode: 0
+  myController: 1
+  ClipButton: 8192
+  ProceduralButton: 16384
+  ClipToTest: {fileID: 8300000, guid: d01ac943bcbdf7a4082ed6bd761124b2, type: 3}
+  continuous: 0
+  pIntensity: 0
+  pLength: 25
+  useSin: 0
+  SinSpeed: 25

@@ -1,0 +1,62 @@
+
+############################
+Haptics Helper Documentation
+############################
+
+#######################################################################################################
+If you are still having trouble please contact for support@3lbgames.com we would be glad to assist you.
+#######################################################################################################
+
+#######################################################################################################
+Haptic Helper is a singleton that allows you to call haptics anywhere for the Oculus Touch.
+It also includes a test mode so you can test clips and procedural haptics it includes the following features:
+
+-Predesigned Positive and Negative Clips
+-Call Extra Preset Clips
+-Convert AudioClip Directly to Haptic
+-Generate Procedural Haptic Tone
+-Haptic Test Mode for In-editor
+-Sample Haptic Waveforms
+#######################################################################################################
+
+Setup:
+
+1) Import OVRTouch 
+2) Apply HapticsHelper.cs To an Empty Game Object in the Scene.
+3) Call the singleton below or use the Haptics Test section in the inspector
+
+-We have included a Demo Scene you will have to add a tag "TouchL" and "TouchR" to the sphere colliders to work correctly.
+
+
+-Note: The Touch Controllers do not play Haptics unless the headset is on or you cover the sensor.
+
+####################################
+Haptics Example Calls from Singleton
+####################################
+
+//Plays Bad Clip on Left Controller
+HapticHelper.instance.PlayBadClip(true);
+
+//Plays Bad Clip on Right Controller
+HapticHelper.instance.PlayBadClip(false);
+
+//Plays Good Clip on Right Controller
+HapticHelper.instance.PlayGoodClip(false);
+
+//Plays Good Clip on left Controller
+HapticHelper.instance.PlayGoodClip(true);
+
+//Plays Good Clip on left Controller and overRide all other Haptics on this Controller
+HapticHelper.instance.PlayGoodClip(true,true);
+
+//Plays ExtraAudioClips in Index Zero on Left Controller
+HapticHelper.instance.PlayExtraClips(true,0);
+
+//Plays Extra Clip in Index Zero on Left Controller
+HapticHelper.instance.PlayExtraClips(true,0);
+
+//Plays Procedural Tone at max Intensity for 20ms on  Left Controller
+HapticHelper.instance.ProceduralTone(true, 255, 20);
+
+//Plays Provided AudioClip on Left Controller
+HapticHelper.instance.PlayHapticAudioClip(true, aClip);
